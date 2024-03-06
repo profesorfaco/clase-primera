@@ -9,24 +9,36 @@
   <body>
     <div class="container-fluid m-0 p-0">
       <div class="row row-cols-2 g-0" style="height:100vh">
-        <div class="h-100 bg-danger d-flex align-items-center justify-content-center">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+        <div class="h-100 bg-info d-flex align-items-center justify-content-center">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 42">
             <g id="primera"></g>
           </svg>
         </div>
         <div class="h-100 bg-success d-flex align-items-center justify-content-center">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 42">
             <g id="segunda"></g>
           </svg>          
         </div>
       </div>
     </div>
     <script>
-      const data = [50,10];
+      //comentario de una línea en JavaScript
+      /*
+        comentario
+        de
+        varias
+        líneas
+      */
+      const primerValor = 88;
+      const segundoValor = 68;
       let cero = document.querySelector("#primera");
-      cero.innerHTML = `<circle cx="50" cy="50" r="${data[0]}" />`;
+      cero.innerHTML = `<circle class="donut-hole" cx="21" cy="21" r="15.91549430918954" fill="#fff"></circle>
+  <circle class="donut-ring" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#d2d3d4" stroke-width="3"></circle>
+  <circle class="donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#ce4b99" stroke-width="3" stroke-dasharray="${primerValor} ${100-primerValor}" stroke-dashoffset="0"></circle><text x="18" y="21" font-size="3">${primerValor}%</text>`;
       let uno = document.querySelector("#segunda");
-      uno.innerHTML = `<circle cx="50" cy="50" r="${data[1]}" />`;
+      uno.innerHTML = `<circle class="donut-hole" cx="21" cy="21" r="15.91549430918954" fill="#fff"></circle>
+  <circle class="donut-ring" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#d2d3d4" stroke-width="3"></circle>
+  <circle class="donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#ce4b99" stroke-width="3" stroke-dasharray="${segundoValor} ${100-segundoValor}" stroke-dashoffset="0"></circle><text x="18" y="21" font-size="3">${segundoValor}%</text>`;
     </script>
   </body>
 </html>
